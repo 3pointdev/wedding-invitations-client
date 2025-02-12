@@ -7,13 +7,19 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "clean": "npx rimraf node_modules .next package-lock.json && npm cache clean --force && npm install"
+    "clean": "npx rimraf node_modules .next yarn.lock && yarn cache clean --force && yarn install"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "axios": "^1.7.9",
     "next": "^14.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "swiper": "^11.2.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

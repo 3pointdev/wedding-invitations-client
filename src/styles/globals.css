@@ -3,19 +3,93 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f9f5f6;
+  --foreground: #17171b;
+  --primary: #f2bed1;
+  --secondary: #fdcedf;
+  --tertiay: #f8e8ee;
+  --swiper-pagination-bullet-horizontal-gap: 6px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
+  width: 100vw;
+  height: 100vh;
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
 }
+
+.thumbs_swiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.thumbs_swiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.thumbs_swiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 
+.swiper .swiper-pagination {
+  height: 22px;
+  border-radius: 10px;
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: var(--tertiay);
+  opacity: 0.7;
+  position: relative;
+  transform: rotate(45deg);
+  border-radius: 0;
+  top: 5px;
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet::before,
+.swiper .swiper-pagination .swiper-pagination-bullet::after {
+  content: "";
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  border-radius: 50%;
+  background: var(--tertiay);
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet::before {
+  left: -50%;
+  bottom: 0;
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet::after {
+  top: -50%;
+  right: 0px;
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet-active {
+  width: 14px;
+  height: 14px;
+  background: var(--primary);
+  opacity: 1;
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet-active::before,
+.swiper .swiper-pagination .swiper-pagination-bullet-active::after {
+  width: 13px;
+  height: 13px;
+  background: var(--primary);
+} */

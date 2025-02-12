@@ -1,7 +1,11 @@
 import CommentDto from "src/dto/comment.dto";
 import axios from "axios";
-import Comment from "src/components/comment";
-import Splash from "src/components/splash";
+import Comment from "src/components/comment/comment";
+import PageContainer from "src/components/layout/pageContainer";
+import WeddingTitle from "src/components/main/weddingTitle";
+import MainImages from "src/components/main/mainImages";
+import Direction from "src/components/main/direction";
+import BankAccount from "src/components/main/bankAccount";
 
 export default async function Home() {
   const api = axios.create({
@@ -27,9 +31,12 @@ export default async function Home() {
   let commentList = await getComments();
 
   return (
-    <div>
-      <Splash />
+    <PageContainer>
+      <WeddingTitle />
+      <MainImages />
+      <Direction />
+      <BankAccount />
       <Comment list={commentList} />
-    </div>
+    </PageContainer>
   );
 }
